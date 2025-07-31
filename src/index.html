@@ -6,6 +6,11 @@
     <title>NEOTECH</title>
 
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Syne:wght@400..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
@@ -21,38 +26,85 @@
     <header>
         <nav>
             <ul>
-                <ul>
+                <ul id="navLinks">
                     <li>
                         <a href="#">LOGO</a>
                     </li>
                     <li>
-                        <a href="#">L'entreprise</a>
-                        <div>
-                            <span>Stagiaires & Recrutement</span>
-                            <ul>
-                                <li>
-                                    <a href="#">Demandes de stages</a>
-                                </li>
-                                <li>
-                                    <a href="#">Recrutement</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <a href="#">L'ENTREPRISE</a>
+                        <ul id="dropDown">
+                            <li>
+                                <a href="#" class="hoverEffect">DEMANDES DE STAGES</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hoverEffect">RECRUTEMENT</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="#">Reprise Matériel</a>
+                        <a href="#" class="hoverEffect">REPRISE MATÉRIEL</a>
                     </li>
                 </ul>
-                <li>
+                <li id="menuBtn">
                     <input type="checkbox" name="parameters" id="parameters">
                     <span></span>
                     <span></span>
                 </li>
             </ul>
         </nav>
-
-        <div id="hiddenDiv"></div>
     </header>
+    <div id="hiddenDiv">
+        <div>
+            <div>
+                <h3>NAVIGATION</h3>
+                <ul>
+                    <li>
+                        <a href="#" class="hoverEffect">ACCUEIL</a>
+                    </li>
+                    <li>
+                        <a href="#">L'ENTREPRISE</a>
+                        <ul>
+                            <li>
+                                <a href="#" class="hoverEffect">DEMANDES DE STAGES</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hoverEffect">RECRUTEMENT</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hoverEffect">REPRISE MATÉRIEL</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3>CONTACTS</h3>
+                <ul>
+                    <li>
+                        <a href="tel:+0466276773" class="hoverEffect">04 66 27 67 73</a>
+                    </li>
+                    <li>
+                        <a href="mailto:magasin@neotech-nimes.com" class="hoverEffect">magasin@neotech-nimes.com</a>
+                    </li>
+                    <li>
+                        <p>94 avenue du Dr. Fleming, Z.I. St-Césaire - 30900 Nîmes</p>
+                    </li>
+                    <li>
+                        <p>Ouvert du lundi au samedi de 09h00 à 19h00, 15h00 le samedi</p>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3>INFORMATIONS LÉGALES</h3>
+                <ul>
+                    <li>
+                        <p>© 2025 <strong>Torpedo Investments</strong> | <a href="#" class="hoverEffect">Mentions Légales</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div></div>
+    </div>
 
     <!-- 
         Boutique
@@ -131,8 +183,8 @@
                     <p>Installés à Nîmes depuis plus de 20 ans, nous avons bâti notre réputation sur la proximité, la confiance et un service humain.</p>
                 </li>
                 <li>
-                    <h3>Bien plus qu’une boutique</h3>
-                    <p>NEOTECH est un lieu où la technologie rencontre l’humain. Ici, vous êtes conseillé, écouté, accompagné. Que vous soyez curieux, passionné ou professionnel, on s’adapte à vos besoins.</p>
+                    <h3>Bien plus qu'une boutique</h3>
+                    <p>NEOTECH est un lieu où la technologie rencontre l'humain. Ici, vous êtes conseillé, écouté, accompagné. Que vous soyez curieux, passionné ou professionnel, on s’adapte à vos besoins.</p>
                 </li>
                 <li>
                     <h3>Vente de matériel informatique</h3>
@@ -375,5 +427,8 @@
         </div>
 
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>

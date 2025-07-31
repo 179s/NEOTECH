@@ -1,0 +1,227 @@
+:root{
+
+    /* declaration des variables css */
+
+    --d100: #0f172a;
+    --d200: #334155;
+
+    --l100: #f8fafc;
+    --l200: #c1c8cf;
+
+    --acc: #349be6;
+
+}
+
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 300vh;
+    background-color: var(--l100);
+    color: var(--d100);
+    font-family: "Instrument Sans";
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Work Sans";
+}
+
+a{
+    color: var(--d100);
+    text-decoration: none;
+    cursor: default;
+}
+
+li{
+    list-style: none;
+}
+
+.hoverEffect:hover{
+    text-decoration: underline solid var(--acc);
+    cursor: pointer;
+}
+
+/* barre de navigation */
+
+header{
+    position: fixed;
+    top: 0; left: 0;
+
+    width: 100%; height: 90px;
+    z-index: 999;
+
+    background-color: var(--l100);
+}
+
+header nav>ul{
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    
+    /* background-color: red; */
+}
+
+#navLinks{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+
+    /* background-color: cyan; */
+}
+#navLinks>li{
+    position: relative;
+    display: flex;
+
+    /* background-color: blue; */
+}
+#navLinks>li>a{
+    padding: 20px 3vw;
+
+    /* background-color: orange; */
+}
+#navLinks>li:nth-of-type(1) a:hover{
+    text-decoration: none;
+}
+#navLinks>li:nth-of-type(2) a:hover ~ #dropDown,
+#dropDown:hover{
+    opacity: 1;
+    pointer-events: all;
+}
+#dropDown{
+    position: absolute;
+    top: 100%; left: 0;
+    width: 100%; height: 90px;
+    gap: 5px;
+    padding-block: 5px;
+
+    display: flex; flex-direction: column;
+
+    opacity: 0;
+    pointer-events: none;
+
+    /* background-color: cyan; */
+}
+#dropDown li{
+    flex: 1;
+    display: flex;
+    border: 1px solid var(--l200);
+}
+#dropDown li a{
+    flex: 1;
+    padding-inline: 5px;
+    display: flex;
+    align-items: center;
+    background-color: var(--l100);
+}
+
+@media screen and (max-width: 768px) {
+    #navLinks{
+        display: none;
+    }
+    header nav>ul{
+        justify-content: end;
+    }
+}
+
+#menuBtn{
+    position: relative;
+    width: 90px;
+
+    /* background-color: yellow; */
+}
+#menuBtn input{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    opacity: 0;
+    z-index: 1;
+}
+#menuBtn span{
+    --offsetY: -1;
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 60%; height: 3px;
+
+    transform: translateX(-50%) translateY(calc(5px * var(--offsetY)));
+
+    /* border-radius: 4px; */
+    transition: all .3s ease;
+    
+    background-color: var(--d100);
+}
+#menuBtn span:nth-of-type(2){
+    --offsetY: 1;
+    width: 30%;
+    transform: translateX(0) translateY(calc(5px * var(--offsetY)));
+}
+
+#menuBtn input:hover{
+    cursor: pointer;
+}
+#menuBtn input:checked ~ span{
+    width: 60%;
+    transform: translateX(-50%) translateY(0) rotate(calc(15deg * var(--offsetY)));
+
+    background-color: var(--acc);
+}
+
+#hiddenDiv{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: calc(100vh - 90px);
+
+    display: flex;
+    padding: 1vh 2vw;
+    gap: 20px;
+
+    z-index: 9;
+    opacity: 0;
+    pointer-events: none;
+
+    transform: translateY(calc(-100vh + 90px));
+    transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1),
+    opacity 1s 1s ease;
+
+    background-color: var(--d100);
+    color: var(--l100);
+} 
+#hiddenDiv.active{
+    opacity: 1;
+    pointer-events: all;
+
+    transform: translateY(90px);
+    transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#hiddenDiv>div{
+    display: flex; flex-direction: column;
+    gap: 50px;
+
+    /* background-color: red; */
+}
+#hiddenDiv>div li{
+    padding-left: 4vw;
+    padding-block: 10px 0;
+    color: var(--l100);
+}
+#hiddenDiv>div li li{
+    padding-block: 0 0;
+}
+#hiddenDiv>div li a{
+    color: var(--l100);
+}
+#hiddenDiv>div li li a{
+    color: var(--l200);
+}
+
+
+
+#hero{
+    height: 100vh;
+    display: flex; flex-direction: column;
+    justify-content: end;
+}
