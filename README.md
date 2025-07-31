@@ -36,6 +36,7 @@ Ce projet vise à refondre le site web de **NEOTECH**, boutique d'informatique s
 
 Pour toute question ou suggestion, contactez :  
 **HAMZA CHAMROUK**  (*179se.*) — hc30.pro@gmail.com
+
 **NEOTECH INFORMATIQUE** — magasin@neotech-nimes.com
 
 ---
