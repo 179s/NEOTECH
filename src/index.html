@@ -4,8 +4,362 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEOTECH</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
+    <!-- 
+        2 bandeaux :
+                Tel: 04 66 27 67 73     Mail: magasin@neotech-nimes.com
+                NEOTECH INFORMATIQUE                                            Accueil     L'entreprise    Reprise de matériel informatique
+
+        -> Bandeau simple (plus moderne, plus de visibilité)
+
+        Logo    L'entreprise(drop down)    Reprise Matériel                                                parametres(gerer l'apparence du site ex: theme sombre/clair)
+    -->
+    <header>
+        <nav>
+            <ul>
+                <ul>
+                    <li>
+                        <a href="#">LOGO</a>
+                    </li>
+                    <li>
+                        <a href="#">L'entreprise</a>
+                        <div>
+                            <span>Stagiaires & Recrutement</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Demandes de stages</a>
+                                </li>
+                                <li>
+                                    <a href="#">Recrutement</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Reprise Matériel</a>
+                    </li>
+                </ul>
+                <li>
+
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 
+        Boutique
+        d'informatique à                ESPACE INUTILISE (pas d'image)
+        Nîmes
+
+        🗺️ 94 avenue du Dr. Fleming, Z.I. St-Césaire - 30900 Nîmes  
+        📞 04 66 27 67 73 📧 magasin@neotech-nimes.com
+        🕰️ Ouvert du lundi au samedi de 09h00 à 19h00, 15h00 le samedi
+
+        📦 ColisPrivé Store
+
+        ♻️ Reprise de vos anciens équipements
+
+        🧔 Cette boutique est gérée par Romain & Florian
+
+        Suivez-nous sur les réseaux !
+
+
+        Beaucoup d’informations au même endroit : l’utilisateur est envahi et la visibilité est moindre.
+        → Je vais employer le Z-pattern layout : titre à gauche, image à droite, paragraphe sous le titre, et les réseaux tout en bas à droite.
+
+
+        NEOTECH INFORMATIQUE                               
+        📍Nimes                                           [IMAGE DE FOND]
+
+        NEOTECH est situé au 94 avenue du Dr. Fleming, Z.I. St-Césaire, 30900 Nîmes.        |
+        Ouvert du lundi au samedi de 9h00 à 19h00 (jusqu’à 15h00 le samedi).                | Ici, on a les infos principales
+        Contact : 04 66 27 67 73 — magasin@neotech-nimes.com                                |
+
+        Reprise de matériel informatique — Point relais ColisPrivé        |
+        Boutique gérée par Romain et Florian.                             | ici, les infos secondaire (pas forcément importantes pour l’utilisateur, mais qui améliorent le contact client)
+
+    -->
+    <section id="hero">
+
+        <h1>NEOTECH INFORMATIQUE</h1>
+        <span>
+            <p>NEOTECH est situé au 94 avenue du Dr. Fleming, Z.I. St-Césaire, 30900 Nîmes.</p>
+            <p>Ouvert du lundi au samedi de 9h00 à 19h00 (jusqu'à 15h00 le samedi).</p>
+            <p>Contact : 04 66 27 67 73 — magasin@neotech-nimes.com</p>
+        </span>
+        <span>
+            <p>Reprise de matériel informatique — Point relais ColisPrivé</p>
+            <p>Boutique gérée par Romain et Florian.</p>
+        </span>
+        <div id="media">
+            <a href="#">facebook</a>
+        </div>
+
+        <img src="#" alt="image d'arrière plan" id="bgImg">
+
+        <!-- <canvas></canvas>  -->
+        <!-- important pour plus tard -->
+
+    </section>
+
+    <!-- 
+          Notre magasin d'informatique, installé à Nîmes depuis 2003, ne se limite pas à être une simple boutique. C’est un lieu où la technologie et le service
+        personnalisé se rejoignent dans une atmosphère conviviale. Que vous recherchiez un nouvel ordinateur, une réparation, des conseils en informatique ou une
+                          solution sur mesure pour votre entreprise, nous sommes à votre disposition à Nîmes, dans la Vaunage et ses environs.                  
+
+        Encore une fois, on se retrouve avec beaucoup de texte.
+        Or, de nos jours, les utilisateurs passent souvent à côté de ce point fort du site. Pour y remédier, j’ai une solution :
+
+        Utiliser une liste à puces. L’idée serait de scinder cette section en deux :
+            - à gauche, une liste avec chaque point sous forme de titre + description ;
+            - à droite, un modèle 3D d’ordinateur pour rappeler le côté gamer.
+    -->
+    <section id="about">
+
+        <aside>
+            <ul>
+                <li>
+                    <h3>Une présence locale depuis 2003</h3>
+                    <p>Installés à Nîmes depuis plus de 20 ans, nous avons bâti notre réputation sur la proximité, la confiance et un service humain.</p>
+                </li>
+                <li>
+                    <h3>Bien plus qu’une boutique</h3>
+                    <p>NEOTECH est un lieu où la technologie rencontre l’humain. Ici, vous êtes conseillé, écouté, accompagné. Que vous soyez curieux, passionné ou professionnel, on s’adapte à vos besoins.</p>
+                </li>
+                <li>
+                    <h3>Vente de matériel informatique</h3>
+                    <p>PC sur-mesure, composants, périphériques, accessoires gaming… Nous vous aidons à choisir le bon matériel selon votre usage et votre budget.</p>
+                </li>
+                <li>
+                    <h3>Réparation & maintenance</h3>
+                    <p>Un problème technique ? Nous réparons, entretenons et optimisons votre matériel informatique, qu’il ait été acheté chez nous ou non.</p>
+                </li>
+                <li>
+                    <h3>Solutions pour entreprises</h3>
+                    <p>Nous accompagnons les professionnels de Nîmes, la Vaunage et ses alentours dans leurs besoins en informatique, sécurité, réseau ou maintenance.</p>
+                </li>
+            </ul>
+        </aside>
+        
+    </section>
+
+    <!-- 
+
+            Nos Services
+
+        🖥️ Vente d'Ordinateurs neufs et reconditionnés : Nos ordinateurs reconditionnés sont soigneusements analysés par nos techniciens, et bénéficient d'une
+                garantie gratuite de deux ans pièces et main d'oeuvre. Nous sommes également spécialisés en assemblage de PC Gamer à Beaucaire pour une
+                                                        configuration sur-mesure juste pour vous !
+
+        🔧 Réparation et Dépannage : En cas de problème avec votre ordinateur, notre équipe de techniciens diagnostiquera et réparera rapidement votre matériel.
+                                Que ce soit pour un écran cassé, un virus ou une lenteur générale, nous avons la solution.
+
+        💼 Dépannage informatique pour les professionnels : Nous comprenons les besoins spécifiques des entreprises en matière d'informatique. Nous offrons
+                    des services de maintenance, des solutions réseau, sécurité et sauvegarde pour assurer la continuité de vos opérations.
+
+        📦 Accessoires et Périphériques : Découvrez également un panel complet d'accessoires informatiques, des claviers et souris aux imprimantes, en passant
+                                                            par les câbles et adaptateurs.
+    
+        L’une des sections importantes, si ce n’est la plus importante, est celle des services.
+        La plupart des visiteurs s’y arrêtent pour lire,
+        il est donc ESSENTIEL de rendre cette section la plus lisible possible.
+
+        Ici, le problème ne vient pas tant de la quantité de texte,
+        mais plutôt de son organisation.
+        Le centrage ne permet pas une lecture confortable des phrases longues.
+        → Une des solutions serait d’utiliser des cartes, éventuellement accompagnées d’images.
+         _______________
+        |               |
+        |     titre     |       Avantage : ajout générique, pas besoin de changer
+        |               |                  le style car le même de partout.
+        |  description  |
+        |_______________|
+
+    -->
+    <section id="services">
+
+        <h2>NOS SERVICES</h2>
+
+        <ul>
+            <li>
+                <h4>Vente d'Ordinateurs neufs et reconditionnés</h4>
+                <span>
+                    <p>Nos ordinateurs reconditionnés sont soigneusement analysés par nos techniciens et bénéficient d'une garantie gratuite de deux ans (pièces et main d'œuvre).</p>
+                    <p>Nous sommes également spécialisés en assemblage de PC Gamer à Beaucaire, pour une configuration sur-mesure rien que pour vous !</p>
+                </span>
+            </li>
+            <li>
+                <h4>Réparation et Dépannage</h4>
+                <span>
+                    <p>En cas de problème avec votre ordinateur, notre équipe diagnostique et répare rapidement votre matériel.</p>
+                    <p>Que ce soit un écran cassé, un virus ou une lenteur générale, nous avons la solution adaptée.</p>
+                </span>
+            </li>
+            <li>
+                <h4>Dépannage informatique pour les professionnels</h4>
+                <span>
+                    <p>Nous comprenons les besoins spécifiques des entreprises en informatique.</p>
+                    <p>Nous offrons des services de maintenance, solutions réseau, sécurité et sauvegarde pour assurer la continuité de vos opérations.</p>
+                </span>
+            </li>
+            <li>
+                <h4>Accessoires et Périphériques</h4>
+                <span>
+                    <p>Découvrez un large choix d'accessoires informatiques : claviers, souris, imprimantes, câbles, adaptateurs, et bien plus encore.</p>
+                </span>
+            </li>
+        </ul>
+
+    </section>
+
+    <!--
+    
+                                                                        Pourquoi Choisir Notre Boutique ?
+
+        ✅ Expertise Locale : Depuis 2003, nous servons Nîmes et ses environs. Comprenant parfaitement les besoins des particuliers et des professionnels locaux,
+                                                                notre équipe aura une vision globale de vos besoins.
+
+        ✅ Service Personnalisé : Avant et même bien après la vente... Nous restons à votre entière disposition pour vous écouter et vous conseiller dans l'utilisation
+                                                                                de votre matériel.
+
+        ✅ Qualité Garantie : Nous proposons uniquement à la vente du matériel fiable et de qualité, nos ordinateurs reconditionnés sont issus de gamme
+                                                                                Professionnelles.
+
+        ✅ Réactivité : Parce que vous en avez besoin , notre atelier s'efforce de résoudre rapidement vos problèmes entre 24 et 72 heures.
+
+        ✅ Matériel contrôlé : L'origine de notre matériel est suivie sous le contrôle d'un huissier de justice, la garantie d'un matériel original est obtenu en toute
+                                                                                    légalité !
+
+
+            N'hésitez pas à nous rendre visite dans notre boutique à Nîmes, 94 avenue du Dr. Fleming. Pour découvrir notre gamme complète de produits et de services.
+                                    Vous pouvez également nous contacter par téléphone ou par email pour toute demande d'informations.
+
+
+        L'idée des bullet point est pas mauvaise en soit, le probleme ici c'est qu'il y a de la redondance avec la section à propos du site,
+        de plus on a le même style que la section services, si l'utilisateur n'aime pas le premier design il pensera même pas à lire celle-ci.
+
+        → Pour améliorer cette section, je vais utiliser un style accordéon, plus communément appelé style FAQ.
+        D’ailleurs, lorsqu’un utilisateur arrive jusqu’ici (s’il y parvient), il est logique qu’il commence à se poser des questions sur la marque.
+        Le format FAQ est donc tout à fait approprié.
+
+         ___________________________________
+        |                            |     |
+        |              Titre         |  +  |
+        |____________________________|_____|
+
+        Ce qui est bien avec ce style c'est que la structure html reste
+        globalement la même que pour les cartes, on change que le style.
+         ___________________________________
+        |                            |     |
+        |              Titre         |  -  |
+        |____________________________|_____|
+        |                                  |
+        |                                  |
+        |            Description           |
+        |                                  |
+        |__________________________________|
+
+    -->
+    <section id="valuePosition">
+
+        <h2>POURQUOI CHOISIR NEOTECH ?</h2>
+
+        <ul>
+            <li>
+                <div>
+                    <h4>Quelle est l'expertise de NEOTECH ?</h4>
+                    <input type="checkbox" name="accordion " id="accordion">
+                    <span>+</span>
+                </div>
+                <span>
+                    <p>Depuis 2003, NEOTECH accompagne les particuliers comme les professionnels de Nîmes et des environs.</p>
+                    <p>Notre équipe, ancrée localement, comprend les besoins spécifiques de notre clientèle et apporte des solutions adaptées, que ce soit pour l'achat, le dépannage ou le conseil informatique.</p>
+                </span>
+            </li>
+
+            <li>
+                <div>
+                    <h4>Le service client continue-t-il après l'achat ?</h4>
+                    <input type="checkbox" name="accordion " id="accordion">
+                    <span>+</span>
+                </div>
+                <span>
+                    <p>Absolument. Notre engagement ne s'arrête pas à la vente. Que vous rencontriez un souci technique ou ayez besoin d'aide dans l'utilisation de votre matériel, nous restons disponibles pour vous accompagner et vous conseiller, même longtemps après votre passage en boutique.</p>
+                </span>
+            </li>
+
+            <li>
+                <div>
+                    <h4>Le matériel est-il fiable ?</h4>
+                    <input type="checkbox" name="accordion " id="accordion">
+                    <span>+</span>
+                </div>
+                <span>
+                    <p>Nous sélectionnons rigoureusement chaque produit. Nos ordinateurs reconditionnés proviennent exclusivement de gammes professionnelles, testés et garantis deux ans.</p>
+                    <p>De plus, l'origine de notre matériel est vérifiée sous contrôle d'huissier, vous assurant une légalité et une fiabilité totale.</p>
+                </span>
+            </li>
+
+            <li>
+                <div>
+                    <h4>Les réparations sont-elles rapides ?</h4>
+                    <input type="checkbox" name="accordion " id="accordion">
+                    <span>+</span>
+                </div>
+                <span>
+                    <p>Nous savons combien il est difficile d'être privé de son matériel. C'est pourquoi notre atelier s'engage à traiter les réparations dans un délai rapide, généralement entre 24 et 72 heures, selon la nature du problème.</p>
+                </span>
+            </li>
+        </ul>
+
+    </section>
+
+    <!-- 
+        Cette partie a été globalement réussie, rien à redire si ce n’est que le logo Facebook ne s’affiche pas (lien possiblement mort).
+        La redirection vers Facebook, en revanche, fonctionne correctement !
+    -->
+    <footer>
+        
+        <div>
+            <h4>NEOTECH GARD INFORMATIQUE</h4>
+            <ul>
+                <li>
+                    <h4>Notre société</h4>
+                    <ul>
+                        <li>
+                            <a href="#">Recrutement</a>
+                        </li>
+                        <li>
+                            <a href="#">Nous contacter</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Contacts utiles</h4>
+                    <ul>
+                        <li>
+                            <a href="tel:+0466276773">Téléphone: 04 66 27 67 73</a>
+                        </li>
+                        <li>
+                            <a href="mailto:magasin@neotech-nimes.com">Mail: magasin@neotech-nimes.com</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Rejoignez-nous !</h4>
+                    <a href="#">facebook</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="copy">
+            <p>© 2025 <strong>Torpedo Investments</strong> | <a href="#">Mentions Légales</a></p>
+        </div>
+
+    </footer>
 </body>
 </html>
