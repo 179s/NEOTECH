@@ -6,9 +6,14 @@
     --d200: #334155;
 
     --l100: #f8fafc;
-    --l200: #c1c8cf;
+    --l200: #c8daee;
 
     --acc: #349be6;
+
+
+
+    --scrollBtnRadius: 120px;
+    --SMIconRadius: 45px;
 
 }
 
@@ -19,209 +24,255 @@
 
 body{
     min-height: 300vh;
+    font-family: "Instrument Sans";
     background-color: var(--l100);
     color: var(--d100);
-    font-family: "Instrument Sans";
 }
 
-h1, h2, h3, h4, h5, h6{
+.title{
     font-family: "Work Sans";
 }
 
 a{
     color: var(--d100);
     text-decoration: none;
-    cursor: default;
 }
 
 li{
     list-style: none;
 }
 
-.hoverEffect:hover{
-    text-decoration: underline solid var(--acc);
-    cursor: pointer;
-}
+/* navbar */
 
-/* barre de navigation */
-
-header{
+nav{
     position: fixed;
-    top: 0; left: 0;
-
     width: 100%; height: 90px;
-    z-index: 999;
+    display: flex;
+    padding-inline: 20px;
+
+    z-index: 9999;
 
     background-color: var(--l100);
+    color: var(--l100)
 }
 
-header nav>ul{
+nav>a{
+    width: 90px;
     display: flex;
-    justify-content: space-between;
-    height: 90px;
-    
-    /* background-color: red; */
+    justify-content: center; align-items: center;
 }
 
-#navLinks{
+nav ul{
     flex: 1;
     display: flex;
     align-items: center;
     gap: 2vw;
+    padding-inline: 5vw;
+}
 
-    /* background-color: cyan; */
-}
-#navLinks>li{
-    position: relative;
-    display: flex;
-
-    /* background-color: blue; */
-}
-#navLinks>li>a{
-    padding: 20px 3vw;
-
-    /* background-color: orange; */
-}
-#navLinks>li:nth-of-type(1) a:hover{
-    text-decoration: none;
-}
-#navLinks>li:nth-of-type(2) a:hover ~ #dropDown,
-#dropDown:hover{
-    opacity: 1;
-    pointer-events: all;
-}
-#dropDown{
-    position: absolute;
-    top: 100%; left: 0;
-    width: 100%; height: 90px;
-    gap: 5px;
-    padding-block: 5px;
+#burger{
+    width: 90px; height: 90px;
+    padding: 10px;
 
     display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    gap: 4px;
 
-    opacity: 0;
-    pointer-events: none;
-
-    /* background-color: cyan; */
-}
-#dropDown li{
-    flex: 1;
-    display: flex;
-    border: 1px solid var(--l200);
-}
-#dropDown li a{
-    flex: 1;
-    padding-inline: 5px;
-    display: flex;
-    align-items: center;
-    background-color: var(--l100);
-}
-
-@media screen and (max-width: 768px) {
-    #navLinks{
-        display: none;
-    }
-    header nav>ul{
-        justify-content: end;
-    }
-}
-
-#menuBtn{
-    position: relative;
-    width: 90px;
+    display: none;
+    margin-left: auto;
 
     /* background-color: yellow; */
 }
-#menuBtn input{
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
 
-    opacity: 0;
-    z-index: 1;
-}
-#menuBtn span{
-    --offsetY: -1;
-    position: absolute;
-    top: 50%; left: 50%;
-    width: 60%; height: 3px;
+#burger span{
+    --offset: -1;
+    width: 100%; height: 4px;
+    transition: rotate .4s .4s ease;
 
-    transform: translateX(-50%) translateY(calc(5px * var(--offsetY)));
-
-    /* border-radius: 4px; */
-    transition: all .3s ease;
-    
     background-color: var(--d100);
 }
-#menuBtn span:nth-of-type(2){
-    --offsetY: 1;
-    width: 30%;
-    transform: translateX(0) translateY(calc(5px * var(--offsetY)));
+
+#burger .small{
+    --offset: 1;
+    transform-origin: right;
+    scale: .5 1;
+    rotate: 0deg;
+
+    transition: scale .4s ease,
+    rotate .4s .4s ease;
 }
 
-#menuBtn input:hover{
-    cursor: pointer;
+#burger.active span{
+    scale: 1;
+    rotate: calc(3.27deg * 4 * var(--offset));
+    /* 
+    on a 2 segments de 70 par 4 arranger verticalement et espacé de 4px
+    On cherche l'angle qui correspond pour faire une croix :
+    ----  ->    \/
+    ----  ->    /\
+
+    arctan(4/70) ~= 3.27deg
+    or on pivote depuis la droite et non du milieu,
+    donc on ajoute un facteur, 4 semble correcte.
+    */
 }
-#menuBtn input:checked ~ span{
-    width: 60%;
-    transform: translateX(-50%) translateY(0) rotate(calc(15deg * var(--offsetY)));
+
+/* landing page */
+
+#hero{
+    position: relative;
+    width: 100%; height: 100vh;
+    display: flex;
+
+    background-color: var(--l200);
+}
+
+#hero .socialMedias{
+    min-width: 70px; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: end;
+
+    padding-block: 40px;
+    gap: 20px;
+
+    /* background-color: cyan; */
+}
+#hero .socialMedias a{
+    width: var(--SMIconRadius); height: var(--SMIconRadius);
+    border-radius: 50%;
 
     background-color: var(--acc);
 }
 
-#hiddenDiv{
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: calc(100vh - 90px);
+.heroContent{
+    flex: 1;
+    display: flex;
+
+    /* background-color: black; */
+}
+
+.heroContent div{
+    flex: 1;
+
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding-inline: 2vw;
+
+    /* background-color: orange; */
+}
+.heroContent div .title{
+    font-size: max(64px, 10vw);
+}
+.heroContent div .title span{
+    color: var(--acc);
+}
+.heroContent div p{
+    display: flex; flex-direction: column;
+    margin-bottom: 20px;
+    font-size: max(8px, 1.2vw);
+    color: var(--d200);
+}
+
+#hero .scrollDown{
+    flex: 1;
+    display: flex;
+    justify-content: center; align-items: end;
+
+    padding-block: 50px;
+
+    /* background-color: green; */
+}
+#hero .scrollDown a{
+    width: var(--scrollBtnRadius); height: var(--scrollBtnRadius);
+    border-radius: 50%;
 
     display: flex;
-    padding: 1vh 2vw;
+    justify-content: center; align-items: center;
+
+    font-weight: 900;
+    font-size: 5em;
+
+    transform: rotate(135deg);
+    background-color: var(--acc);
+}
+
+/* a propos */
+
+#about{
+    /* height: 250px; */
+    background-color: var(--d200);
+
+    display: flex; flex-wrap: wrap;
+    justify-content: center; align-items: center;
     gap: 20px;
+    padding: 40px 20px;
+}
 
-    z-index: 9;
-    opacity: 0;
-    pointer-events: none;
+#about div{
+    /* flex: 1; */
+    min-width: 340px;
+    padding: 10px;
 
-    transform: translateY(calc(-100vh + 90px));
-    transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1),
-    opacity 1s 1s ease;
+    display: flex;
+    justify-content: start; align-items: center;
+    gap: 10px;
+
 
     background-color: var(--d100);
+
     color: var(--l100);
-} 
-#hiddenDiv.active{
-    opacity: 1;
-    pointer-events: all;
-
-    transform: translateY(90px);
-    transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    /* background-color: var(--acc); */
+}
+#about p{
+    font-size: .75em;
+    color: var(--l200)
 }
 
-#hiddenDiv>div{
-    display: flex; flex-direction: column;
-    gap: 50px;
-
-    /* background-color: red; */
-}
-#hiddenDiv>div li{
-    padding-left: 4vw;
-    padding-block: 10px 0;
-    color: var(--l100);
-}
-#hiddenDiv>div li li{
-    padding-block: 0 0;
-}
-#hiddenDiv>div li a{
-    color: var(--l100);
-}
-#hiddenDiv>div li li a{
-    color: var(--l200);
+.abtIcon{
+    width: 50px; height: 50px;
+    background-color: var(--l200);
 }
 
+@media screen and (max-width: 800px) {
+    :root{
+        --scrollBtnRadius: 75px;
+    }
+    nav ul{
+        display: none;
+    }
+    #burger{
+        display: flex;
+    }
 
+    #hero{
+        height: calc(100vh - 40px);
+    }
+    #hero .socialMedias{
+        position: absolute;
+    }
+    .heroContent{
+        flex-direction: column;
+    }
+    .heroContent div .title{
+        text-align: center;
+    }
+    .heroContent div p{
+        margin-inline: auto;
+    }
+    #hero .scrollDown{
+        padding-block: 0;
+        max-height: calc(120px + 50px);
+        align-items: center;
+    }
+    #hero .scrollDown a{
+        font-size: 3.125em;
+        transform: rotate(90deg);
+    }
 
-#hero{
-    height: 100vh;
-    display: flex; flex-direction: column;
-    justify-content: end;
+    #about div{
+        flex: 1;
+    }
 }
+
+/* services */
+
