@@ -31,11 +31,20 @@
             <li><a href="#">Recrutement</a></li>
             <li><a href="#">Reprise de matériel</a></li>
         </ul>
-        <div id="burger" class="activ">
+        <div id="burger">
             <span></span>
             <span class="small"></span>
         </div>
     </nav>
+
+    <div id="hiddenDiv">
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Demandes de stages</a></li>
+            <li><a href="#">Recrutement</a></li>
+            <li><a href="#">Reprise de matériel</a></li>
+        </ul>
+    </div>
 
     <!-- 
         Boutique
@@ -72,10 +81,18 @@
     -->
     <main id="hero">
         <aside class="socialMedias">
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
+            <a target="_blank" href="mailto:magasin@neotech-nimes.com">
+                <img src="./img/mail.svg" alt="mail">
+            </a>
+            <a target="_blank" href="tel:+04 66 27 67 73">
+                <img src="./img/tel.svg" alt="tel">
+            </a>
+            <a target="_blank" href="https://www.facebook.com/neotechinformatique">
+                <img src="./img/facebook.svg" alt="facebook">
+            </a>
+            <a target="_blank" href="https://www.google.fr/maps/place/NEOTECH+-+GARD+INFORMATIQUE+-+Partenaire+Dell/@43.8145594,4.3157152,270m/data=!3m1!1e3!4m15!1m8!3m7!1s0x12b42c27d995551d:0x2c2b94e70da5f28d!2s94+Av.+du+Dr+Fleming,+30900+N%C3%AEmes!3b1!8m2!3d43.8143915!4d4.3172898!16s%2Fg%2F11c4mvv73w!3m5!1s0x12b42c27de515acf:0x2ff4ae0486a7f829!8m2!3d43.8147277!4d4.31642!16s%2Fg%2F11df3xjlj2?hl=fr&entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D">
+                <img src="./img/map.svg" alt="map">
+            </a>
         </aside>
         <div class="heroContent">
             <div>
@@ -88,7 +105,7 @@
                 </p>
             </div>
             <aside class="scrollDown">
-                <a href="#">-></a>
+                <a href="#about">-></a>
             </aside>
         </div>
     </main>
@@ -106,21 +123,21 @@
         <div>
             <span class="abtIcon"></span>
             <span>
-                <h3>Fiabilité</h3>
+                <h3 class="title">Fiabilité</h3>
                 <p>Du matériel testé, garanti, et d'origine certifiée.</p>
             </span>
         </div>
         <div>
             <span class="abtIcon"></span>
             <span>
-                <h3>Réactivité</h3>
+                <h3 class="title">Réactivité</h3>
                 <p>Un atelier qui répond vite, très vite.</p>
             </span>
         </div>
         <div>
             <span class="abtIcon"></span>
             <span>
-                <h3>Proximité</h3>
+                <h3 class="title">Proximité</h3>
                 <p>Une équipe locale à votre écoute.</p>
             </span>
         </div>
@@ -149,18 +166,51 @@
 
         Ici, le problème ne vient pas tant de la quantité de texte,
         mais plutôt de son organisation.
-        Le centrage ne permet pas une lecture confortable des phrases longues.
-        → Une des solutions serait d’utiliser des cartes, éventuellement accompagnées d’images.
-         _______________
-        |               |
-        |     titre     |       Avantage : ajout générique, pas besoin de changer
-        |               |                  le style car le même de partout.
-        |  description  |
-        |_______________|
+        Le centrage ne permet pas une lecture confortable.
 
     -->
     <sections id="services">
-
+        <ul>
+            <li class="node">
+                <h1 class="title">Vente & Assemblage de PC</h1>
+                <p>Neuf ou reconditionné, chaque PC est testé, garanti 2 ans, et prêt à l'emploi.</p>
+                <ul class="service-facts">
+                    <li>✔ Garantie : 2 ans pièces & main d’œuvre</li>
+                    <li>✔ Reconditionnement certifié</li>
+                    <li>✔ Assemblage PC Gamer sur-mesure</li>
+                </ul>
+            </li>
+            <li class="node">
+                <h1 class="title">Réparation & Dépannage</h1>
+                <p>De la panne matérielle aux virus, on s'occupe de tout, rapidement.</p>
+                <ul class="service-facts">
+                    <li>✔ Délai moyen : 24 à 72h</li>
+                    <li>✔ Écrans, disques, RAM, OS, nettoyage</li>
+                    <li>✔ Devis rapide & transparent</li>
+                </ul>
+            </li>
+            <li class="node">
+                <h1 class="title">Services aux Professionnels</h1>
+                <p>Une offre dédiée aux entreprises locales, pour travailler sans interruption.</p>
+                <ul class="service-facts">
+                    <li>✔ Maintenance et dépannage à distance</li>
+                    <li>✔ Sauvegardes & cybersécurité</li>
+                    <li>✔ Réseaux, serveurs, messagerie</li>
+                </ul>
+            </li>
+            <li class="node">
+                <h1 class="title">Accessoires & Périphériques</h1>
+                <p>Tout ce qu’il vous faut pour compléter votre installation informatique.</p>
+                <ul class="service-facts">
+                    <li>✔ Souris, claviers, imprimantes, câbles...</li>
+                    <li>✔ Marques fiables & garantie produit</li>
+                    <li>✔ Disponibles en boutique</li>
+                </ul>
+            </li>
+            </ul>
+        <aside>
+            <h1>canvas</h1>
+        </aside>
     </sections>
 
     <!--
@@ -211,18 +261,100 @@
         |__________________________________|
 
     -->
-    <section id="valuePosition"></section>
+    <section id="valuePosition">
+        <h2 class="title">Des questions ? On vous guide.</h2>
+        <ul class="faq-list">
+
+            <li>
+                <details>
+                    <summary>Depuis quand existe votre boutique et pourquoi choisir un commerce local ?</summary>
+                    <p>NEOTECH est implanté à Nîmes depuis 2003. Grâce à notre ancrage local, nous comprenons les attentes spécifiques des particuliers et professionnels de la région. Vous bénéficiez d’un accompagnement humain, proche et durable.</p>
+                </details>
+            </li>
+
+            <li>
+                <details>
+                    <summary>Est-ce que vous assurez un suivi après l’achat ?</summary>
+                    <p>Absolument. Notre service ne s’arrête pas à la vente. Nous vous conseillons dans l’installation, l’utilisation et l’entretien de votre matériel, même des mois plus tard. Vous n’êtes jamais seul face à un problème.</p>
+                </details>
+            </li>
+
+            <li>
+                <details>
+                    <summary>Vos produits sont-ils fiables ?</summary>
+                    <p>Oui, nous ne proposons que du matériel de qualité, rigoureusement sélectionné. Nos ordinateurs reconditionnés proviennent exclusivement de gammes professionnelles, testées et garanties.</p>
+                </details>
+            </li>
+
+            <li>
+                <details>
+                    <summary>En combien de temps puis-je espérer un dépannage ?</summary>
+                    <p>Notre atelier s’engage à traiter la majorité des réparations entre 24 et 72 heures. Nous savons à quel point votre matériel est essentiel, et agissons en conséquence.</p>
+                </details>
+            </li>
+
+            <li>
+                <details>
+                    <summary>L’origine de vos produits est-elle vérifiée ?</summary>
+                    <p>Oui. Tous nos matériels sont contrôlés sous la supervision d’un huissier de justice. Cela garantit une traçabilité complète et une légalité irréprochable.</p>
+                </details>
+            </li>
+
+        </ul>
+    </section>
+
 
     <!-- 
         Dans cette partie, pas de photo ni de poste attribué a chaque membre de l'équipe, difficile de faire mieux, mais je peux essayé.
     -->
-    <section id="team"></section>
+    <section id="contact">
+        <h1>Contactez-nous</h1>
+        <a href="#">-></a>
+    </section>
 
     <!-- 
         Cette partie a été globalement réussie, rien à redire si ce n’est que le logo Facebook ne s’affiche pas (lien possiblement mort).
         La redirection vers Facebook, en revanche, fonctionne correctement !
     -->
-    <footer></footer>
+    <footer>
+        <div>
+            <p>NEOTECH GARD INFORMATIQUE</p>
+            <h3 class="title">Notre société</h3>
+            <ul>
+                <li><a href="#">Demandes de stages</a></li>
+                <li><a href="#">Recrutement</a></li>
+            </ul>
+        </div>
+        <div>
+            <p></p>
+            <h3 class="title">Contacts utiles</h3>
+            <ul class="footerMedia">
+                <li>
+                    <a target="_blank"  href="mailto:magasin@neotech-nimes.com">
+                        <img src="./img/mail.svg" alt="mail">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank"  href="tel:+04 66 27 67 73">
+                        <img src="./img/tel.svg" alt="tel">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank"  href="https://www.facebook.com/neotechinformatique">
+                        <img src="./img/facebook.svg" alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank"  href="https://www.google.fr/maps/place/NEOTECH+-+GARD+INFORMATIQUE+-+Partenaire+Dell/@43.8145594,4.3157152,270m/data=!3m1!1e3!4m15!1m8!3m7!1s0x12b42c27d995551d:0x2c2b94e70da5f28d!2s94+Av.+du+Dr+Fleming,+30900+N%C3%AEmes!3b1!8m2!3d43.8143915!4d4.3172898!16s%2Fg%2F11c4mvv73w!3m5!1s0x12b42c27de515acf:0x2ff4ae0486a7f829!8m2!3d43.8147277!4d4.31642!16s%2Fg%2F11df3xjlj2?hl=fr&entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D">
+                        <img src="./img/map.svg" alt="map">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="copy">
+            <p>&copy; 2025 <strong>Torpedo Investments</strong> | <a href="#">Mentions Légales</a></p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 
