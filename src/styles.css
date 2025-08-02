@@ -8,8 +8,8 @@
     --l100: #f8fafc;
     --l200: #c8daee;
 
-    --acc: #349be6;
-
+    --acc: #349ce6;
+    --acc-rgb: 52, 156, 230;
 
 
     --scrollBtnRadius: 120px;
@@ -31,7 +31,7 @@ body{
 }
 
 .title{
-    font-family: "Work Sans";
+    font-family: "Archivo Black";
 }
 
 a{
@@ -247,7 +247,7 @@ nav ul{
 
 .abtIcon{
     width: 50px; height: 50px;
-    background-color: var(--l200);
+    /* background-color: var(--l200); */
 }
 
 @media screen and (max-width: 800px) {
@@ -294,10 +294,8 @@ nav ul{
 /* services */
 
 #services{
-    width: 100%;
     display: flex;
-    
-    background-color: var(--l100);
+    padding-inline: 4vw;
 }
 #services>ul{
     flex: 1;
@@ -310,30 +308,50 @@ nav ul{
     width: 100%;
     display: flex; flex-direction: column;
     justify-content: center;
-    gap: 50px;
-    padding: 50px 2vw;
+    gap: 20px;
+    padding-block: 50px;
 
     background-color: var(--l200);
     color: var(--d200);
+    border-radius: 25px;
 }
 #services h1{
-    font-size: 5vw;
+    font-size: max(32px, 5vw);
     text-align: center;
     color: var(--d100);
+    padding-inline: 2vw;
 }
-#services .node p,
+#services .node p{
+    text-align: center;
+    padding-inline: 50px;
+}
+#services .node .service-facts{
+    display: flex; flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px 2vw;
+}
+#services .node .service-facts li{
+    padding: 10px 25px;
+    border-radius: 25px;
+    background-color: rgba(var(--acc-rgb), .4);
+    cursor: default;
+}
+#services .node .service-facts li:hover{
+    background-color: var(--acc);
+}
+#services .node p{
+    font-size: min(24px, 4vw);
+}
 #services .node .service-facts{
     font-size: min(16px, 3vw);
 }
 
-#services aside{
-    flex: 1;
-    height: calc(100vh - 90px);
-    position: sticky;
-    top: 90px;
-
-    /* background-color: red; */
+#services .node img{
+    object-fit: cover;
+    width: 100%; height: 100%;
 }
+
+/* value position */
 
 #valuePosition{
     display: flex; flex-direction: column;
