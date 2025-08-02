@@ -488,9 +488,11 @@ footer div ul{
 }
 #hiddenDiv a{
     color: var(--l100);
-    font-size: 5vw;
     text-align: center;
+}
+#hiddenDiv a:hover{
     text-decoration: underline 2px solid var(--acc);
+
 }
 
 #hiddenDiv.active{
